@@ -1,0 +1,51 @@
+body{
+  background-color: #ffc857;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: dashed;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  border: solid red;
+}
+
+.grid-settings-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-settings-container button,
+.color-settings-container button  {
+  margin-top: 1.3em;
+}
+
+.color-settings-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#grid-container {
+  display: grid;
+  margin: auto 4em;
+  width: 550px;
+  height: 550px;
+  /* grid-template-columns: repeat(16, 2.5VW);
+  grid-template-rows: repeat(16, 5VH); */
+  grid-template-columns: repeat(16, auto );
+  grid-template-rows: repeat(16, auto);
+  background-color: #e7e7e7;
+  border: #578eff solid .5em;
+}
+
+.grid-item {
+  background-color: #ffffff;
+  border: .5px solid rgba(0, 0, 0, 0.8);
+}
