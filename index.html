@@ -5,16 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Etch-A-Sketch</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="reset-button">
-    <button id="button" type="button" value="clear">Click Me!</button>
-  </div>
-  <div id="grid-container" class="grid-container">
+  <div class="container">
+
+    <header>
+      <h1>Etch-A-Sketch</h1>
+    </header>
+
+    <div class="game-container">
+
+      <div class="grid-settings-container">
+        <p>Grid Settings</p>
+        <button id="new-grid" type="button">New Grid</button>
+        <button id="erase-grid" type="button">Erase</button>
+      </div>
+
+      <div id="grid-container" class="grid-container"></div>
+
+      <div class="color-settings-container">
+        <p>Color Settings</p>
+        <button id="black-color-button" type="button" value="black" >Black</button>
+        <button id="random-color-button" type="button" value="random" >Random</button>
+        <button id="shade-in-button" type="button" value="shade">Shade In</button>
+      </div>
+
+    </div>
 
   </div>
-  
 </body>
 <script src="script.js"></script>
-<link rel="stylesheet" href="styles.css">
 </html>
