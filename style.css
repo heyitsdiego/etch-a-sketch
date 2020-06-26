@@ -45,7 +45,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: dashed;
 }
 
 .game-container {
@@ -53,20 +52,13 @@ button {
   flex-direction: column;
   width: 90%;
   height: 85vh;
-  border: solid red;
 }
 
 .grid-settings-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: dashed blue;
   margin-bottom: 5%;
-}
-
-.grid-settings-container button,
-.color-settings-container button  {
-  /* margin-top: 1em; */
 }
 
 .grid-settings-buttons {
@@ -77,7 +69,6 @@ button {
 }
 
 .color-settings-container {
-  border: dashed blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +90,8 @@ button {
   grid-template-columns: repeat(16, auto );
   grid-template-rows: repeat(16, auto);
   background-color: #e7e7e7;
-  border: #578eff solid .5em;
+  border: #fc2c03 solid .5em;
+  border-radius: 5px;
 }
 
 .grid-item {
@@ -117,8 +109,6 @@ button {
     height: 500px;
     grid-template-columns: repeat(16, auto );
     grid-template-rows: repeat(16, auto);
-    background-color: #e7e7e7;
-    border: #578eff solid .5em;
   }
 }
 
@@ -131,7 +121,7 @@ button {
     display: flex;
     flex-direction: row;
     width: 90%;
-    border: solid red;
+    max-width: 1200px;
   }
 
   #grid-container {
@@ -141,71 +131,18 @@ button {
     height: 550px;
     grid-template-columns: repeat(16, auto );
     grid-template-rows: repeat(16, auto);
-    background-color: #e7e7e7;
-    border: #578eff solid .5em;
   }
 
   .grid-settings-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: dashed blue;
   }
 
   .color-settings-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: dashed blue;
-    margin-top: 0;
-  }
-
-  .grid-settings-buttons {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .color-settings-buttons {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-
-@media (min-width: 1200px) {
-  .game-container {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    border: solid red;
-  }
-
-  #grid-container {
-    max-width: auto;
-    display: grid;
-    margin: 0 2em;
-    width: 60%;
-    height: 60%;
-    grid-template-columns: repeat(16, auto );
-    grid-template-rows: repeat(16, auto);
-    background-color: #e7e7e7;
-    border: #578eff solid .5em;
-  }
-
-  .grid-settings-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: dashed blue;
-  }
-
-  .color-settings-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: dashed blue;
     margin-top: 0;
   }
 
