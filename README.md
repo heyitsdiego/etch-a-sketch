@@ -10,13 +10,13 @@ A web version of the classic game.
 <img alt="etch-a-sketch preview image" src="assets/etch_a_sketch.png" width="500px">
 
 ## Features
-* Colors: 
-  *  Black
-  *  Random
-  *  Shaded
 * Settings:
   * New Grid
   * Clear
+* Colors: 
+  *  Black
+  *  Random
+  *  Shade In
 
 ## Built With
 * HTML
