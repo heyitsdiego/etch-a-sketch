@@ -5,7 +5,7 @@ function blackBackground(e) {
 
 function randomBackground(e) {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  e.target.style.backgroundColor = `+${randomColor}`;
+  e.target.style.backgroundColor = `#${randomColor}`;
 }
 
 function shadeBackground(e) {
@@ -72,7 +72,7 @@ function renderInitialGridDivs() {
   }
 }
 
-function eraseGrid() {
+function clearGrid() {
   const gridDivs = document.querySelectorAll(".grid-item");
   gridDivs.forEach((div) => {
     div.style.backgroundColor = "";
@@ -106,21 +106,34 @@ function recieveUserInput() {
   setNewGrid(userInput);
 }
 
+function toggleButtonActiveStyle(e) {
+  const { target } = e;
+  const colorSettingsButtons = document.querySelectorAll(
+    ".color-settings-button"
+  );
+  colorSettingsButtons.forEach((button) => {
+    button.classList.remove("button-active-style");
+  });
+  target.classList.add("button-active-style");
+}
 // DOM methods
 const newGridButton = document.getElementById("new-grid");
 newGridButton.addEventListener("click", recieveUserInput);
 
-const eraseGridButton = document.getElementById("erase-grid");
-eraseGridButton.addEventListener("click", eraseGrid);
+const clearGridButton = document.getElementById("clear-grid");
+clearGridButton.addEventListener("click", clearGrid);
 
 const randomColorButton = document.getElementById("random-color-button");
 randomColorButton.addEventListener("click", updateEventListener);
+randomColorButton.addEventListener("click", toggleButtonActiveStyle);
 
 const blackColorButton = document.getElementById("black-color-button");
 blackColorButton.addEventListener("click", updateEventListener);
+blackColorButton.addEventListener("click", toggleButtonActiveStyle);
 
 const shadeInButton = document.getElementById("shade-in-button");
 shadeInButton.addEventListener("click", updateEventListener);
+shadeInButton.addEventListener("click", toggleButtonActiveStyle);
 
 // Render initial grid
 renderInitialGridDivs();
